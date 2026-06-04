@@ -1,27 +1,36 @@
+---
 
-# 🚀 BurPro One-Shot Automated Environment
+# 🚀 BurpDroid: One-Shot Automated Mobile Penetration Testing Environment
 
-ይህ ፕሮጀክት የ **Burp Suite Professional Edition** አካባቢን በማንኛውም የ Kali Linux ወይም Termux (PRoot Distro) ላይ ያለምንም አሰልቺ ቅደም ተከተሎች (Steps) በ "One-Shot" ለመጫን እና ለማስነሳት የተዘጋጀ አውቶሜትድ መተግበሪያ ነው።
+በሞባይል መሳሪያዎች (Termux/PRoot Distro) እና በ Kali Linux ላይ የላቁ የደህንነት ፍተሻዎችን በሚያደርጉበት ጊዜ የ Burp Suite Professional አካባቢን በእጅ ማዋቀር፣ የፍቃድ ፋይሎችን መትከል እና ተደጋጋሚ የአነሳስ ቅደም ተከተሎችን መከተል እጅግ አሰልቺ እና አድካሚ ሂደት ነው።
+
+**BurpDroid** ይህንን ችግር ሙሉ በሙሉ ይፈታል! ሁሉንም አስፈላጊ የሆኑ የጀርባ አግብሮቶች፣ የፓች ወኪሎች (Java Agents) እና የንብረት ፋይሎችን ወደ አንድ ነጠላ ፓኬጅ (`BurPro.jar`) በመጠቅለል፣ ያለምንም የፍቃድ ጥያቄ መስኮት **በአንድ ጠቅታ (One-Click)** ሙሉውን የPro ስሪት ወዲያውኑ ለአገልግሎት ዝግጁ ያደርጋል።
+
+---
+
+## ✨ ዋና ዋና ባህሪያት (Key Features)
+
+* **ቅጽበታዊ አነሳስ (Instant Pro Activation):** ምንም ዓይነት የ Community/Pro ምርጫ ወይም የፍቃድ ማስገቢያ መስኮት ሳይመጣ በቀጥታ ወደ Pro Workspace ይገባል።
+* **ሙሉ በሙሉ የተሟላ (Zero-Configuration):** የፓች ወኪሎችን ማዋቀር ወይም የፖሊሲ ፋይሎችን በእጅ ማስተካከል አይጠበቅብዎትም።
+* **ራስገዝ ዝመና (Transparent Auto-Updates):** መተግበሪያው በተነሳ ቁጥር አዳዲስ ማሻሻያዎችን ከ GitHub ላይ በራሱ በመፈተሽ ያዘምናል።
+* **ለሞባይል የተመቻቸ (Mobile-First Architecture):** በሊኑክስ ስልኮች፣ በ Termux አካባቢዎች እና በንፁህ የ Kali ስሪቶች ላይ ያለ እንከን እንዲሰራ ተደርጎ የተገነባ ነው።
 
 ---
 
 ## 🛠️ ቅድመ-ሁኔታዎች (Prerequisites)
 
-ይህ መተግበሪያ እንዲሠራ በሲስተምህ ላይ **Java 25** መጫን አለበት። ጃቫ ካልተጫነ ወይም የድሮ ስሪት ከሆነ የሚከተሉትን ትዕዛዞች በተርሚናልህ ላይ በማሄድ በነፃ መጫን ትችላለህ።
+ይህ መተግበሪያ በተሻለ አፈጻጸም እንዲሠራ በሲስተምዎ ላይ **Java 25** መጫን አለበት። ጃቫ ካልተጫነ የሚከተሉትን ትዕዛዞች በተርሚናልዎ ላይ በማሄድ መጫን ይችላሉ።
 
-### 1️⃣ በ Kali Linux ላይ Java 25 የመጫኛ መንገዶች፦
-ተርሚናልህን ክፈትና የሚከተሉትን ትዕዛዞች በቅደም ተከተል አስነሳ፦
+### 1️⃣ በ Kali Linux ላይ Java 25 ለመጫን፦
 
 ```bash
 # የሲስተም ፓኬጆችን ማደስ
-apt update && apt upgrade -y
-```
-```
+sudo apt update && sudo apt upgrade -y
+
 # Java 25 OpenJDK መጫን
-apt install openjdk-25-jdk openjdk-25-jre -y
-```
-```
-# በትክክል መጫኑን ማረጋገጫ (ስሪቱ 25 መሆኑን እይ)
+sudo apt install openjdk-25-jdk openjdk-25-jre -y
+
+# ስሪቱን ማረጋገጥ
 java -version
 
 ```
@@ -39,37 +48,60 @@ java -version
 
 ## 🚀 አጠቃቀም (How to Use)
 
-ምንም አይነት ተጨማሪ ፋይል ወይም Settings ማስተካከል አይጠበቅብህም!
-
-1. ከዚህ GitHub ሪፖዚቶሪ ላይ `BurPro.jar` የሚለውን ፋይል ብቻ አውርድ።
-``bash
-git clone https://github.com/ANK-369/BurpDroid.git
-cd BurpDroid
-``
-3. ወደ ወረደበት ፎልደር በተርሚናል ግባና የሚከተለውን ነጠላ ትዕዛዝ ብቻ አስነሳ፦
+ምንም አይነት ተጨማሪ ፋይል ወይም መቼት ማስተካከል አይጠበቅብዎትም! የሚከተሉትን ሁለት ትዕዛዞች ብቻ በተርሚናልዎ ላይ ያሂዱ፦
 
 ```bash
+# 1. ማጠራቀሚያውን መቅዳት
+git clone https://github.com/ANK-369/BurpDroid.git
+cd BurpDroid
+
+# 2. መተግበሪያውን ማስነሳት
 java -jar BurPro.jar
 
 ```
 
 ---
 
-## 🔄 አውቶሜትድ አፕዴት (Self-Updating System)
+## 📸 የእይታ ማሳያ (Visual Showcase)
 
-ይህ መተግበሪያ በራሱ የሚደስስ (Self-Updating) ሎጂክ አለው። በየጊዜው ተርሚናል ላይ `java -jar BurPro.jar` በምትልበት ሰዓት፦
+ፕሮጀክቱ በሚነሳበት እና በሚሰራበት ጊዜ ያለው የሂደት ሂደት በሚከተሉት ምስሎች ተደራጅቷል (ምስሎቹን በ ማከማቻዎ ውስጥ `assets/screenshots/` በሚለው ፎልደር ስር ያስቀምጧቸው)፦
 
-* መተግበሪያው በመጀመሪያ ከዚህ የ GitHub ገጽ ላይ አዲስ ማሻሻያ መኖሩን በራሱ ያያል።
-* አዲስ ስሪት ካገኘ የቅርብ ጊዜውን ፋይል በራሱ አውርዶ ይተካል።
-* አንተ ሁልጊዜ የምታገኘው የቅርብ ጊዜውን እና የተስተካከለውን የ Pro ስሪት ይሆናል።
+### 1. የስርዓት መነሳት እና ማረጋገጫ (Boot & Verification Sequence)
+
+መተግበሪያው ሲነሳ የኮር አውቶሜሽን ባነር፣ የ GitHub አውቶ-አፕዴት ፍተሻ እና ንብረቶችን የማዘጋጀት ስራዎችን በአስተማማኝ ሁኔታ ያከናውናል።
+
+
+### 2. ፈጣን የፕሮጀክት ጠንቋይ (Instant Project Wizard)
+
+ያለምንም የፍቃድ ወይም የኮሚዩኒቲ ምርጫ ጥያቄ፣ መተግበሪያው ወዲያውኑ የባለሙያ መለያ ፍቃዱን አረጋግጦ አዲስ ፕሮጀክት እንዲከፍቱ ያዘጋጅልዎታል።
+
+
+### 3. ሙሉ የባለሙያ ዳሽቦርድ (Active Professional Dashboard)
+
+ሁሉም የላቁ የፍተሻ ክፍሎች (Scanner, Intruder, Repeater) ሙሉ በሙሉ እንደነቁ የሚያሳይ የቀጥታ ስራ ቦታ አካባቢ።
+
 
 ---
 
-## 🧹 ሲስተሙን ሙሉ በሙሉ እንደ አዲስ ለማጽዳት (Reset)
+## 🔄 አውቶሜትድ አፕዴት (Self-Updating System)
 
-መተግበሪያውን ሙሉ በሙሉ አጥፍተህ ልክ እንደ አዲስ ስልክ መሞከር ከፈለግክ ይህንን ትዕዛዝ ተጠቀም፦
+በየጊዜው ተርሚናል ላይ `java -jar BurPro.jar` በምትሉበት ሰዓት፦
+
+* መተግበሪያው በመጀመሪያ ከ GitHub የሊንክ አውታረ መረብ ላይ አዲስ ማሻሻያ መኖሩን ያያል።
+* አዲስ ስሪት ካገኘ የቅርብ ጊዜውን ፋይል በራሱ አውርዶ በጀርባ ይተካል።
+* ተጠቃሚው ሁልጊዜ የሚያገኘው የቅርብ ጊዜውን እና የተስተካከለውን የ Pro ስሪት ይሆናል።
+
+---
+
+## 🧹 ሲስተሙን ሙሉ በሙሉ እንደ አዲስ ለማጽዳት (Reset Cache)
+
+መተግበሪያውን ሙሉ በሙሉ አጥፍተው መሸጎጫዎችን (Cache) በማጽዳት ልክ እንደ አዲስ ለመጀመር ከፈለጉ ይህንን ትዕዛዝ በተርሚናልዎ ላይ ያሂዱ፦
 
 ```bash
 rm -rf ~/.BurPro_internal_cache ~/.java/.userPrefs/burp
 
 ```
+
+---
+
+**ማሳሰቢያ፦** ይህ መተግበሪያ ለትምህርት፣ ለደህንነት ምርምር እና ህጋዊ ለሆኑ የፔኔትሬሽን ቴስቲንግ ስራዎች ብቻ እንዲያገለግል የተዘጋጀ ነው።
