@@ -1,3 +1,4 @@
+
 # 🚀 BurPro One-Shot Automated Environment
 
 ይህ ፕሮጀክት የ **Burp Suite Professional Edition** አካባቢን በማንኛውም የ Kali Linux ወይም Termux (PRoot Distro) ላይ ያለምንም አሰልቺ ቅደም ተከተሎች (Steps) በ "One-Shot" ለመጫን እና ለማስነሳት የተዘጋጀ አውቶሜትድ መተግበሪያ ነው።
@@ -13,10 +14,62 @@
 
 ```bash
 # የሲስተም ፓኬጆችን ማደስ
-sudo apt update && sudo apt upgrade -y
-
+apt update && apt upgrade -y
+```
+```
 # Java 25 OpenJDK መጫን
-sudo apt install openjdk-25-jdk openjdk-25-jre -y
-
+apt install openjdk-25-jdk openjdk-25-jre -y
+```
+```
 # በትክክል መጫኑን ማረጋገጫ (ስሪቱ 25 መሆኑን እይ)
 java -version
+
+```
+
+### 2️⃣ በ Termux (Kali PRoot) ላይ ለመጫን፦
+
+```bash
+apt update && apt upgrade -y
+apt install openjdk-25 -y
+java -version
+
+```
+
+---
+
+## 🚀 አጠቃቀም (How to Use)
+
+ምንም አይነት ተጨማሪ ፋይል ወይም Settings ማስተካከል አይጠበቅብህም!
+
+1. ከዚህ GitHub ሪፖዚቶሪ ላይ `BurPro.jar` የሚለውን ፋይል ብቻ አውርድ።
+``bash
+git clone https://github.com/ANK-369/BurpDroid.git
+cd BurpDroid
+``
+3. ወደ ወረደበት ፎልደር በተርሚናል ግባና የሚከተለውን ነጠላ ትዕዛዝ ብቻ አስነሳ፦
+
+```bash
+java -jar BurPro.jar
+
+```
+
+---
+
+## 🔄 አውቶሜትድ አፕዴት (Self-Updating System)
+
+ይህ መተግበሪያ በራሱ የሚደስስ (Self-Updating) ሎጂክ አለው። በየጊዜው ተርሚናል ላይ `java -jar BurPro.jar` በምትልበት ሰዓት፦
+
+* መተግበሪያው በመጀመሪያ ከዚህ የ GitHub ገጽ ላይ አዲስ ማሻሻያ መኖሩን በራሱ ያያል።
+* አዲስ ስሪት ካገኘ የቅርብ ጊዜውን ፋይል በራሱ አውርዶ ይተካል።
+* አንተ ሁልጊዜ የምታገኘው የቅርብ ጊዜውን እና የተስተካከለውን የ Pro ስሪት ይሆናል።
+
+---
+
+## 🧹 ሲስተሙን ሙሉ በሙሉ እንደ አዲስ ለማጽዳት (Reset)
+
+መተግበሪያውን ሙሉ በሙሉ አጥፍተህ ልክ እንደ አዲስ ስልክ መሞከር ከፈለግክ ይህንን ትዕዛዝ ተጠቀም፦
+
+```bash
+rm -rf ~/.BurPro_internal_cache ~/.java/.userPrefs/burp
+
+```
