@@ -58,7 +58,7 @@ apt install -y default-jdk
 
 # 1. ማጠራቀሚያውን መቅዳት
 ```bash
-wget 
+wget https://github.com/ANK-369/BurpDroid/releases/download/v5.0.0/BurPro.jar
 ```
 # 2. መተግበሪያውን ማስነሳት
 ```
