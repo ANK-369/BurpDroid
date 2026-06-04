@@ -58,8 +58,7 @@ apt install -y default-jdk
 
 # 1. ማጠራቀሚያውን መቅዳት
 ```bash
-git clone https://github.com/ANK-369/BurpDroid.git
-cd BurpDroid
+wget 
 ```
 # 2. መተግበሪያውን ማስነሳት
 ```
