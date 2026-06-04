@@ -23,14 +23,17 @@
 
 ### 1️⃣ በ Kali Linux ላይ Java 25 ለመጫን፦
 
-```bash
+
 # የሲስተም ፓኬጆችን ማደስ
+```
 sudo apt update && sudo apt upgrade -y
-
+```
 # Java 25 OpenJDK መጫን
+```
 sudo apt install openjdk-25-jdk openjdk-25-jre -y
-
+```
 # ስሪቱን ማረጋገጥ
+```
 java -version
 
 ```
@@ -43,19 +46,23 @@ apt install openjdk-25 -y
 java -version
 
 ```
-
+# Or Install the default 
+```
+apt install -y default-jdk 
+```
 ---
 
 ## 🚀 አጠቃቀም (How to Use)
 
 ምንም አይነት ተጨማሪ ፋይል ወይም መቼት ማስተካከል አይጠበቅብዎትም! የሚከተሉትን ሁለት ትዕዛዞች ብቻ በተርሚናልዎ ላይ ያሂዱ፦
 
-```bash
 # 1. ማጠራቀሚያውን መቅዳት
+```bash
 git clone https://github.com/ANK-369/BurpDroid.git
 cd BurpDroid
-
+```
 # 2. መተግበሪያውን ማስነሳት
+```
 java -jar BurPro.jar
 
 ```
